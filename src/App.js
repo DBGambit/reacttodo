@@ -5,8 +5,7 @@ import styles from './App.module.css';
 function App() {
     return (
         <>
-            <p>ok</p>
-            <p>chokey</p>
+            <Todo />
         </>
     );
 }
