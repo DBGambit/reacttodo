@@ -1,14 +1,13 @@
-import Todo from './containers/todo/todo';
+import Todo from "./containers/todo/todo";
 
-import styles from './App.module.css';
+import styles from "./App.module.css";
 
 function App() {
-    return (
-        <>
-            <p>ok</p>
-            <p>chokey</p>
-        </>
-    );
+  return (
+    <>
+      <Todo />
+    </>
+  );
 }
 
 export default App;
