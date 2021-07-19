@@ -10,6 +10,8 @@ function Button({ type }) {
         return styles.Delete;
       case "Add":
         return styles.Add;
+      case "Save":
+        return styles.Save;
     }
   };
 

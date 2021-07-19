@@ -33,8 +33,7 @@ class Todo extends Component {
     return (
       <>
         <h3>Todo</h3>
-        <Button type="Edit" />
-        <Button type="Delete" />
+
         <Button type="Add" />
         <Cards tasks={this.state.lists} editingHandler={this.editingHandler} />
       </>

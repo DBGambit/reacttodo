@@ -16,8 +16,15 @@
   padding: 5px;
 }
 
+.Save {
+  background-color: lightgreen;
+  border: 0;
+  padding: 5px;
+}
+
 .Add:hover,
 .Edit:hover,
-.Delete:hover {
+.Delete:hover,
+.Save:hover {
   cursor: pointer;
 }
