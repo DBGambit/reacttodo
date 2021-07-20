@@ -1,30 +1,21 @@
 .Card {
-    border:  1px solid blue;
-    width: 150px;
-    height: 200px;
+    border:  1px solid #000040;
+    width: 170px;
+    height: 230px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
     text-align: center;
     box-sizing: border-box;
+    margin: 15px 15px;
 }
 
-.Wrapper {
-    width: 90%;
-    margin: auto;
-    height: 80%;
-    border: 1px solid black;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-y: scroll;
+.CardAnimation {
+    animation: fadeIn 0.7s;
 }
 
-.Wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.Wrapper p {
-    font-style: italic;
-    font-weight: bold;
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
 
 .Text {
@@ -32,14 +23,42 @@
     height: 80%;
     outline: none;
     border: 0;
-    cursor: pointer;
+    cursor: initial;
     overflow-y: scroll;
     word-wrap: break-word;
     font-style: italic;
     font-weight: bold;
     font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    color: #000040;
+    margin-top: 3%;
+    /*border: 1px solid black;*/
 }
 
 .Text::-webkit-scrollbar {
   display: none;
+}
+
+.Buttons {
+    width: 100%;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Done {
+    border-color: #074201;
+    box-shadow: 5px 5px 10px #074201;
+}
+
+.DoneText {
+    color:  #074201;
+}
+
+.Typing {
+    color: brown;
 }

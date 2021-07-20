@@ -1,0 +1,98 @@
+.UpperSection {
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    border:  1px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px black;
+    margin-bottom: 5vh;
+    margin-top: 1.5vh;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Buttons {
+    /*border:  1px solid black;*/
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5%;
+}
+
+.SearchSection {
+    /*border:  1px solid black;*/
+    width: 35%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.Search {
+    color: #000040;
+    width: 100%;
+    height: 100%;
+}
+
+.SearchInput {
+    color: #000040;
+    width: 70%;
+    /*height: 50%;*/
+    font-style: italic;
+    font-size: 2em;
+    outline: none;
+    border-color: #000040;
+    border-radius: 5px;
+}
+
+.Btn {
+    width: 70px;
+    height: 100%;
+    /*border: 1px solid black;*/
+    margin-right: 7%;
+}
+
+.SearchBtn {
+    width: 70px;
+    height: 60%;
+    /*border: 1px solid black;*/
+    margin-right: 5%;
+}
+
+.TextButtons {
+    width: 100%;
+    height: 90%;
+    border: 1px solid red;
+    display: flex;
+}
+
+.BtnIcon {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+
+}
+
+.BtnIcon:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.Create {
+    color: #074201;
+}
+
+.All {
+    color: #000040;
+}
+
+.Completed {
+    color: #074201;
+}
+
+.Active {
+    color: brown;
+}
