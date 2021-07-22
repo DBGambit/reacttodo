@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './backdrop.module.css';
 
 const Backdrop = ({show, closing}) => {
@@ -7,6 +9,11 @@ const Backdrop = ({show, closing}) => {
             </div>
             : null
         )
+}
+
+Backdrop.propTypes = {
+    show: PropTypes.bool,
+    closing: PropTypes.func
 }
 
 export default Backdrop;

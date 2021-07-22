@@ -1,36 +1,14 @@
-<<<<<<< HEAD
-import styles from "./button.module.css";
-import Icon from "../../helpers/Icon";
 
-function Button({ type }) {
-  const getStyles = (type) => {
-    switch (type) {
-      case "Edit":
-        return styles.Edit;
-      case "Delete":
-        return styles.Delete;
-      case "Add":
-        return styles.Add;
-      case "Save":
-        return styles.Save;
-    }
-  };
-
-  return (
-    <button className={getStyles(type)}>
-      <Icon type={type} />
-    </button>
-  );
-=======
 import React from 'react';
 import * as constants from '../../constants';
+import PropTypes from 'prop-types';
 
 import styles from './button.module.css';
 import {Save, Edit, Check, Trash2, CornerUpLeft} from 'react-feather';
 
 
 
-const Button = ({type, taskId, clicking, disabled}) => {
+const Button = React.memo(({type, taskId, clicking, disabled}) => {
 
     const getRightButton = (type) => {
         if (type === constants.EDIT) {
@@ -51,7 +29,13 @@ const Button = ({type, taskId, clicking, disabled}) => {
                 {getRightButton(type)}
             </div>
         )
->>>>>>> d741d101148bacddf0cf69236440df1834e1ee99
+})
+
+Button.propTypes = {
+    type: PropTypes.string,
+    taskId: PropTypes.string,
+    clicking: PropTypes.func,
+    disabled: PropTypes.bool
 }
 
 export default Button;
