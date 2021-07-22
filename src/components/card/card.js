@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import * as constants from '../../constants';
+import PropTypes from 'prop-types';
 import {Info, Edit2, AlertTriangle} from 'react-feather';
 
 import Button from '../button/button';
@@ -8,7 +9,7 @@ import CardInfo from './cardInfo/cardInfo';
 
 import styles from './card.module.css';
 
-const Card = ({description, editing, onInputChange, taskId, btnClickHandler, isDone, isHidden, createdDate, dueOn, type, finalDateChange, typeChange}) => {
+const Card = React.memo(({description, editing, onInputChange, taskId, btnClickHandler, isDone, isHidden, createdDate, dueOn, type, finalDateChange, typeChange}) => {
     const [showInfo, setShowInfo] = useState(false)
     const [editDays, setEditDays] = useState(false)
 
@@ -67,6 +68,21 @@ const Card = ({description, editing, onInputChange, taskId, btnClickHandler, isD
             </div>
             : null
         )
+})
+
+Card.propTypes = {
+    description: PropTypes.string,
+    editing: PropTypes.bool,
+    onInputChange: PropTypes.func,
+    taskId: PropTypes.string,
+    btnClickHandler: PropTypes.func,
+    isDone: PropTypes.bool,
+    isHidden: PropTypes.bool,
+    createdDate: PropTypes.object,
+    dueOn: PropTypes.object,
+    type: PropTypes.bool,
+    finalDateChange: PropTypes.func,
+    typeChange: PropTypes.func
 }
 
 export default Card;
