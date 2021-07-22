@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import styles from "./card.module.css";
-import Button from "../../components/button/button";
-
-const Card = ({ description, editing, onInputChange, taskId }) => {
-  return (
-    <div className={styles.Card}>
-      {/*<div className={styles.Wrapper}>
-                    <p>
-                        {description}
-                    </p>
-                </div>*/}
-      <textarea
-        type="textarea"
-        className={styles.Text}
-        readOnly={editing}
-        defaultValue={description}
-        onChange={(e) => onInputChange(e, taskId)}
-      />
-      <Button type="Edit" />
-      <Button type="Delete" />
-      <Button type="Save" />
-    </div>
-  );
-};
-=======
 import React, {useState} from 'react';
 import * as constants from '../../constants';
 import PropTypes from 'prop-types';
@@ -111,6 +84,5 @@ Card.propTypes = {
     finalDateChange: PropTypes.func,
     typeChange: PropTypes.func
 }
->>>>>>> d741d101148bacddf0cf69236440df1834e1ee99
 
 export default Card;
