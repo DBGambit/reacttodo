@@ -25,7 +25,7 @@ const CardInfo = ({createdDate, dueOn, type, showEdit, dateEditBtnHandler, final
                         onChange={(e) => finalDateChange(e, taskId)}
                         onKeyDown={(e) => e.preventDefault()}
                     ></input>
-                    : <p className={[styles.InfoText, [styles.InfoTextV, styles.InfoTextV].join(' '), styles.InfoTextV].join(' ')}>{Math.floor((dueOn-createdDate)/(24000*60*60))} days left</p>
+                    : <p className={[styles.InfoText, [styles.InfoTextV, styles.InfoTextV].join(' '), styles.InfoTextV].join(' ')}>{Math.floor(((dueOn)-(new Date()))/(24000*60*60))} days left</p>
                 }
                 <p className={styles.InfoText}>Type <span onClick={() => typeChange(taskId)} className={type ? [styles.Type, styles.Important].join(' ') : styles.Type}>{type ? 'Important' : 'Normal'}</span></p>
             </div>

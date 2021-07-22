@@ -16,7 +16,7 @@
 
 .Buttons {
     /*border:  1px solid black;*/
-    width: 50%;
+    width: 60%;
     height: 80%;
     display: flex;
     align-items: center;
@@ -29,6 +29,7 @@
     height: 80%;
     display: flex;
     align-items: center;
+    margin-right: 3%;
 }
 
 .Search {
@@ -49,10 +50,52 @@
 }
 
 .Btn {
-    width: 70px;
+    width: 20%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    /*margin-right: 7%;*/
+}
+
+.Settings {
+    height: 100%;
+    width: 35%;
+    text-align: center;
+}
+
+.TypeConfig {
+    width: 50%;
     height: 100%;
     /*border: 1px solid black;*/
-    margin-right: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.TextSetting {
+    font-style: italic;
+    font-weight: bold;
+    color: #000040;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.Normal {
+    color: #074201;
+}
+
+.Important {
+    color: brown;
+}
+
+.Clickable {
+    transition: transform .3s;
+}
+
+.Clickable:hover {
+    cursor: pointer;
+    color: orange;
+    transform: scale(1.05);
 }
 
 .SearchBtn {

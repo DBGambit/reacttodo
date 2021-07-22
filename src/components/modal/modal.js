@@ -10,7 +10,7 @@ const Modal = ({show, children, closing, modalHeight, empty, top}) => {
     return (
             show ?
             <>
-            <Backdrop show={show} closing={closing} />
+            <Backdrop closing={closing} />
             <div className={styles.Modal} style={{height: modalHeight, marginTop: top}}>
                 {children}
                 {

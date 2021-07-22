@@ -7,12 +7,18 @@ import {ALL, DONE, ACTIVE} from '../../constants';
 
 import styles from './upperSection.module.css';
 
-const UpperSection = React.memo(({createTask, filterHandler, searchHandler}) => {
+const UpperSection = React.memo(({createTask, filterHandler, searchHandler, type, changeType}) => {
     return (
             <div className={styles.UpperSection}>
                 <div className={styles.Buttons}>
                     <div className={styles.Btn} onClick={createTask}>
                         <FilePlus className={[styles.BtnIcon, styles.Create].join(' ')} />
+                    </div>
+                    <div className={styles.Settings}>
+                        <div className={styles.TypeConfig}>
+                            <p onClick={changeType} className={[styles.TextSetting, styles.Clickable].join(' ')}>TYPE</p>
+                            <p className={[styles.TextSetting, (type ? styles.Important : styles.Normal)].join(' ')}>{type ? 'Important' : 'Normal'}</p>
+                        </div>
                     </div>
                     <div className={styles.Btn} onClick={() => filterHandler(ALL)}>
                         <List className={[styles.BtnIcon, styles.All].join(' ')} />
@@ -42,7 +48,9 @@ const UpperSection = React.memo(({createTask, filterHandler, searchHandler}) => 
 UpperSection.propTypes = {
     createTask: PropTypes.func,
     filterHandler: PropTypes.func,
-    searchHandler: PropTypes.func
+    searchHandler: PropTypes.func,
+    type: PropTypes.bool,
+    changeType: PropTypes.func
 }
 
 export default UpperSection;

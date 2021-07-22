@@ -118,6 +118,10 @@ class Todo extends Component {
         this.setState({lists: newLists})
     }
 
+    changeType = () => {
+        this.setState({type: !this.state.type})
+    }
+
 
     render() {
         return (
@@ -126,6 +130,8 @@ class Todo extends Component {
                         createTask={this.createTask}
                         filterHandler={this.filterTasks}
                         searchHandler={this.searchInputHandler}
+                        type={this.state.type}
+                        changeType={this.changeType}
                     />
                     <Cards
                         tasks={this.state.lists}
