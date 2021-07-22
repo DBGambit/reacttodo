@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {initialState, currentId} from '../../getDataFromLS';
 import * as constants from '../../constants';
+import {btnClickHandler, filterTasks, finalDateChangeHandler} from './helper';
 
 import UpperSection from '../../components/upperSection/upperSection';
 import Cards from '../../components/cards/cards';
@@ -13,23 +14,6 @@ class Todo extends Component {
         ...initialState,
         expire: 7,
         type: false
-    }
-
-    finalDateChangeHandler = (e, id) => {
-        let temp = new Date(e.target.value)
-        const newLists = [...this.state.lists]
-        const task = newLists.find(item => item.id === id)
-        if (temp - task.createdDate < 0) {
-            return
-        }
-        task.dueOn = temp
-        let forLS = newLists.map(item => {
-            return {...item,
-                    dueOn: item.dueOn.toISOString()
-                }
-        })
-        localStorage.setItem('tasks', JSON.stringify(forLS))
-        this.setState({lists: newLists})
     }
 
     typeChangeHandler = (id) => {
@@ -67,19 +51,6 @@ class Todo extends Component {
         this.setState({lists: newLists})
     }
 
-    filterTasks = (type) => {
-        const newLists = [...this.state.lists]
-        if (type === constants.ALL) {
-            newLists.forEach(item => item.hidden = false)
-        }else if (type === constants.DONE) {
-            newLists.forEach(item => item.hidden = item.done ? false : true)
-        }else if (type === constants.ACTIVE) {
-            newLists.forEach(item => item.hidden = item.done ? true : false)
-        }
-        localStorage.setItem('tasks', JSON.stringify(newLists))
-        this.setState({lists: newLists})
-    }
-
     searchInputHandler = (e) => {
         let textInput = e.target.value
         const newLists = [...this.state.lists]
@@ -97,27 +68,6 @@ class Todo extends Component {
         this.setState({lists: newLists})
     }
 
-    btnClickHandler = (type, id) => {
-        const newLists = [...this.state.lists]
-        const task = newLists.find(item => item.id === id)
-        if (type === constants.EDIT) {
-            task.editing = true
-        }else if (type === constants.SAVE) {
-            task.editing = false
-        }else if (type === constants.DONE) {
-            task.done = true
-        }else if (type === constants.REMOVE) {
-            if (task.editing === true) {
-                return
-            }
-            newLists.splice(newLists.indexOf(task), 1)
-        }else if (type === constants.UNMARK) {
-            task.done = false
-        }
-        localStorage.setItem('tasks', JSON.stringify(newLists))
-        this.setState({lists: newLists})
-    }
-
     changeType = () => {
         this.setState({type: !this.state.type})
     }
@@ -128,7 +78,7 @@ class Todo extends Component {
                 <>
                     <UpperSection
                         createTask={this.createTask}
-                        filterHandler={this.filterTasks}
+                        filterHandler={filterTasks.bind(this)}
                         searchHandler={this.searchInputHandler}
                         type={this.state.type}
                         changeType={this.changeType}
@@ -136,8 +86,8 @@ class Todo extends Component {
                     <Cards
                         tasks={this.state.lists}
                         editingHandler={this.editingHandler}
-                        btnClickHandler={this.btnClickHandler}
-                        finalDateChange={this.finalDateChangeHandler}
+                        btnClickHandler={btnClickHandler.bind(this)}
+                        finalDateChange={finalDateChangeHandler.bind(this)}
                         typeChange={this.typeChangeHandler}
                     />
                 </>
