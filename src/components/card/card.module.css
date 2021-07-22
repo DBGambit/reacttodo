@@ -69,6 +69,8 @@
     display: flex;
     justify-content: space-between;
     height: 10%;
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 1%;
 }
 
@@ -79,13 +81,15 @@
     font-style: italic;
     color: brown;
     font-size: 0.79em;
-    margin-left: 5%;
+    width: 50%;
+    /*margin-left: 5%;*/
 }
 
 .Info {
     /*border: 1px solid black;*/
     height: 100%;
-    margin-right: 3%;
+    width: 25%;
+    /*margin-right: 3%;*/
 }
 
 .InfoBtn {
@@ -102,9 +106,12 @@
 }
 
 .Important {
-    margin-left: 19%;
+    /*margin-left: 19%;*/
+    width: 25%;
 }
 
 .ImportantIcon {
     color: brown;
+    width: 100%;
+    height: 100%;
 }

@@ -38,6 +38,7 @@
 
 .ExpireBtn {
     height: 100%;
+    width: 25%;
     /*border: 1px solid black;*/
     transition: transform .3s;
     color: #074201;
@@ -82,4 +83,8 @@
 
 .Blue {
     color: #000040;
+}
+
+.FixWidth {
+    width: 50%;
 }
