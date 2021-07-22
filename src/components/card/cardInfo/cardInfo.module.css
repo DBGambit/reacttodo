@@ -1,0 +1,85 @@
+.Info {
+    /*border: 1px solid black;*/
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.Info::-webkit-scrollbar {
+    display: none;
+}
+
+.InfoText {
+    margin: 0;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.79em;
+    color: #000040;
+    margin-bottom: 3%;
+}
+
+.Created {
+    margin-top: 3%;
+}
+
+.InfoTextV {
+    color: #074201;
+}
+
+.Expire {
+    display: flex;
+    /*border: 1px solid black;*/
+    height: 12%;
+    width: 60%;
+    margin: auto;
+    justify-content: space-evenly;
+    border-color: red;
+    margin-bottom: 3%;
+}
+
+.ExpireBtn {
+    height: 100%;
+    /*border: 1px solid black;*/
+    transition: transform .3s;
+    color: #074201;
+}
+
+.ExpireBtn:hover {
+    cursor: pointer;
+    color: #000040;
+    transform: scale(1.1);
+}
+
+.Icon {
+    width: 100%;
+    height: 100%;
+}
+
+.DateInput {
+    width: 90%;
+    border-color: #000040;
+    border-radius: 5px;
+    color: #000040;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 3%;
+}
+
+.Type {
+    color: #074201;
+}
+.Type:hover {
+    cursor: pointer;
+    color: #000040;
+}
+
+.Important {
+    color: brown;
+}
+
+.Important {
+    cursor: pointer;
+}
+
+.Blue {
+    color: #000040;
+}
