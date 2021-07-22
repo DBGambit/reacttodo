@@ -1,0 +1,33 @@
+.Modal {
+    background-color: white;
+    width: 90%;
+    height: 80%;
+    border: 1px solid #074201;
+    border-radius: 9px;
+    z-index: 1000;
+    margin-left: 5%;
+    margin-top: 5%;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.Closing {
+    /*border: 1px solid black;*/
+    height: 15%;
+    width: 100%;
+    top: 83%;
+    position: absolute;
+}
+
+.CloseBtn {
+    color: brown;
+    height: 100%;
+    /*border: 1px solid black;*/
+    transition: transform 0.3s;
+}
+
+.CloseBtn:hover {
+    color: #000040;
+    transform: scale(1.05);
+    cursor: pointer;
+}

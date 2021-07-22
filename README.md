@@ -21,4 +21,5 @@ On the each todo there is textarea to represent the description, when you click 
 All the data saved in localStorage to let you keep data after refresh or after close browser. Also used try/catch for the cases while localStorage turned off
 
 You can use [this app](https://to777do.web.app/). Hope you will enjoy it.
+
 Created with love by Vazgen and Samvel.

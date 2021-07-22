@@ -1,4 +1,5 @@
 .Card {
+<<<<<<< HEAD
   border: 1px solid blue;
   height: 200px;
   border-radius: 10px;
@@ -37,8 +38,121 @@
   font-style: italic;
   font-weight: bold;
   font-size: 1.2em;
+=======
+    border:  1px solid #000040;
+    width: 170px;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 15px 15px;
+    position: relative;
+}
+
+.CardAnimation {
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.Text {
+    width: 90%;
+    height: 70%;
+    outline: none;
+    border: 0;
+    cursor: initial;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    color: #000040;
+    margin-top: 3%;
+    /*border: 1px solid black;*/
+>>>>>>> d741d101148bacddf0cf69236440df1834e1ee99
 }
 
 .Text::-webkit-scrollbar {
   display: none;
+}
+
+.Buttons {
+    width: 100%;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    height: 13%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Done {
+    border-color: #074201;
+    box-shadow: 5px 5px 10px #074201;
+}
+
+.DoneText {
+    color:  #074201;
+}
+
+.Typing {
+    color: brown;
+}
+
+.DateWrapper {
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1%;
+}
+
+.Date {
+    /*border: 1px solid black;*/
+    margin: 0;
+    font-weight: bold;
+    font-style: italic;
+    color: brown;
+    font-size: 0.79em;
+    width: 50%;
+    /*margin-left: 5%;*/
+}
+
+.Info {
+    /*border: 1px solid black;*/
+    height: 100%;
+    width: 25%;
+    /*margin-right: 3%;*/
+}
+
+.InfoBtn {
+    width: 100%;
+    height: 100%;
+    color: #074201;
+    transition: transform 0.3s;
+}
+
+.InfoBtn:hover {
+    cursor: pointer;
+    color: #000040;
+    transform: scale(1.1);
+}
+
+.Important {
+    /*margin-left: 19%;*/
+    width: 25%;
+}
+
+.ImportantIcon {
+    color: brown;
+    width: 100%;
+    height: 100%;
 }
