@@ -1,13 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 import {FilePlus, List, Check, Activity, Search} from 'react-feather';
 
 import {ALL, DONE, ACTIVE} from '../../constants';
 
 import styles from './upperSection.module.css';
 
-const UpperSection = React.memo(({createTask, filterHandler, searchHandler}) => {
+const UpperSection = ({createTask, filterHandler, searchHandler}) => {
     return (
             <div className={styles.UpperSection}>
                 <div className={styles.Buttons}>
@@ -37,12 +34,6 @@ const UpperSection = React.memo(({createTask, filterHandler, searchHandler}) => 
                 </div>
             </div>
         )
-})
-
-UpperSection.propTypes = {
-    createTask: PropTypes.func,
-    filterHandler: PropTypes.func,
-    searchHandler: PropTypes.func
 }
 
 export default UpperSection;

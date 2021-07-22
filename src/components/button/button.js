@@ -1,13 +1,12 @@
 import React from 'react';
 import * as constants from '../../constants';
-import PropTypes from 'prop-types';
 
 import styles from './button.module.css';
 import {Save, Edit, Check, Trash2, CornerUpLeft} from 'react-feather';
 
 
 
-const Button = React.memo(({type, taskId, clicking, disabled}) => {
+const Button = ({type, taskId, clicking, disabled}) => {
 
     const getRightButton = (type) => {
         if (type === constants.EDIT) {
@@ -28,13 +27,6 @@ const Button = React.memo(({type, taskId, clicking, disabled}) => {
                 {getRightButton(type)}
             </div>
         )
-})
-
-Button.propTypes = {
-    type: PropTypes.string,
-    taskId: PropTypes.string,
-    clicking: PropTypes.func,
-    disabled: PropTypes.bool
 }
 
 export default Button;

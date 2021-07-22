@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import {XCircle} from 'react-feather';
 
 import Backdrop from '../backdrop/backdrop';
@@ -19,12 +17,6 @@ const Modal = ({show, children, closing}) => {
             </div>
             </> : null
         )
-}
-
-Modal.propTypes = {
-    show: PropTypes.bool,
-    children: PropTypes.object,
-    closing: PropTypes.func
 }
 
 export default Modal;

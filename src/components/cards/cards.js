@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Card from '../card/card';
 
 import styles from './cards.module.css';
@@ -29,14 +28,6 @@ const Cards = ({tasks, editingHandler, btnClickHandler, finalDateChange, typeCha
                 }
             </div>
         )
-}
-
-Cards.propTypes = {
-    tasks: PropTypes.array,
-    editingHandler: PropTypes.func,
-    btnClickHandler: PropTypes.func,
-    finalDateChange: PropTypes.func,
-    typeChange: PropTypes.func
 }
 
 export default Cards;
