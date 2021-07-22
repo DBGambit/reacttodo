@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Todo web application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application which represents todo list created via [react.js](https://reactjs.org/docs/).
 
-## Available Scripts
+## Buttons
 
-In the project directory, you can run:
+In this app there is button to add each todo, that button is on the top of the page on the left side of the page with plus icon. Besides that there are buttons to filter all, completed and active todos. In each card there are buttons for delete, edit and make the todo done. When you click on edit button it switches to save until you saved, the delete button becomes disabled and the button for making todo completed hides. Also when you click to edit it changes the color of the text in textarea and lets you type.
 
-### `npm start`
+Also there is shown the date of the creation of todo at the top-left side of the card. there is button on the top-right side of the card to see information about creation date and deadline.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Input
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The main input to search for todos is on the top of the page in the right side of the width. The search works by the descriptions in the cards.
 
-### `npm test`
+## textarea
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+On the each todo there is textarea to represent the description, when you click to edit it lets you type in it. On the hover in text the cursor changes to text.
 
-### `npm run build`
+## Localstorage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All the data saved in localStorage to let you keep data after refresh or after close browser. Also used try/catch for the cases while localStorage turned off
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can use [this app](https://to777do.web.app/). Hope you will enjoy it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created with love by Vazgen and Samvel.
