@@ -22,5 +22,5 @@ All the data saved in localStorage to let you keep data after refresh or after c
 
 You can use [this app](https://to777do.web.app/). Hope you will enjoy it.
 
-Created with love by Vazgen and Samvel.
+Created by Vazgen and Samvel.
 
