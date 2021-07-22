@@ -115,3 +115,37 @@
     width: 100%;
     height: 100%;
 }
+
+.DeletionText {
+    font-size: 1.1em;
+    font-style: italic;
+    color: brown;
+    font-weight: bold;
+}
+
+.DeletionButtons {
+    width: 100%;
+    height: 30px;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.DeletionIcons {
+    height: 100%;
+    color: #074201;
+    /*border: 1px solid black;*/
+    transition: transform .3s;
+}
+
+.DeletionIcons:hover {
+    color: #000040;
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.Confirm {
+    color: brown;
+}
