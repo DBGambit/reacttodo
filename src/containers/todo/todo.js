@@ -24,6 +24,19 @@ class Todo extends Component {
         this.setState({lists: newLists})
     }
 
+    changeInitialExpire = (type) => {
+        let val
+        if (type === constants.MINUS) {
+            if (this.state.expire === 1) {
+                return
+            }
+            val = -1
+        }else if(type === constants.PLUS) {
+            val = 1
+        }
+        this.setState({expire: this.state.expire + val})
+    }
+
     createTask = () => {
         const newLists = [...this.state.lists]
         let now = new Date()
@@ -82,6 +95,8 @@ class Todo extends Component {
                         searchHandler={this.searchInputHandler}
                         type={this.state.type}
                         changeType={this.changeType}
+                        expire={this.state.expire}
+                        plusMinusHandler={this.changeInitialExpire}
                     />
                     <Cards
                         tasks={this.state.lists}

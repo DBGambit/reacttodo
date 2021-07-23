@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import * as constants from '../../constants';
 import PropTypes from 'prop-types';
 import {Info, Edit2, AlertTriangle, CornerDownLeft, Check} from 'react-feather';
@@ -14,6 +14,8 @@ const Card = React.memo(({description, editing, onInputChange, taskId, btnClickH
     const [editDays, setEditDays] = useState(false)
     const [deleting, setDeleting] = useState(false)
 
+    const textInput = useRef(null)
+
     const infoBtnClickHandler = () => {
         setShowInfo(!showInfo)
         setEditDays(false)
@@ -25,6 +27,10 @@ const Card = React.memo(({description, editing, onInputChange, taskId, btnClickH
 
     const deletingMenuOpener = () => {
         setDeleting(!deleting)
+    }
+
+    const makeFocus = () => {
+        textInput.current.focus()
     }
 
     const dateString = createdDate.toDateString()
@@ -65,11 +71,12 @@ const Card = React.memo(({description, editing, onInputChange, taskId, btnClickH
                     defaultValue={description}
                     spellCheck="false"
                     onChange={(e) => onInputChange(e, taskId)}
+                    ref={textInput}
                 />
                 <div className={styles.Buttons}>
                     {
                         !isDone ?
-                        <Button taskId={taskId} clicking={btnClickHandler} type={editing ? constants.SAVE : constants.EDIT} />
+                        <Button makeFocus={makeFocus} taskId={taskId} clicking={btnClickHandler} type={editing ? constants.SAVE : constants.EDIT} />
                         : null
                     }
                     {

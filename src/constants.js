@@ -5,3 +5,5 @@ export const SAVE = 'SAVE';
 export const REMOVE = 'REMOVE';
 export const EDIT = 'EDIT';
 export const UNMARK = 'UNMARK';
+export const PLUS = 'PLUS';
+export const MINUS = 'MINUS';

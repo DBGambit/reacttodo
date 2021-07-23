@@ -7,11 +7,11 @@ import {Save, Edit, Check, Trash2, CornerUpLeft} from 'react-feather';
 
 
 
-const Button = React.memo(({type, taskId, clicking, disabled}) => {
+const Button = React.memo(({type, taskId, clicking, disabled, makeFocus}) => {
 
     const getRightButton = (type) => {
         if (type === constants.EDIT) {
-            return <Edit onClick={() => clicking(type, taskId)} className={`${styles.BtnIcon} ${styles.Edit}`} />
+            return <Edit onClick={() => [clicking(type, taskId), makeFocus()]} className={`${styles.BtnIcon} ${styles.Edit}`} />
         }else if (type === constants.DONE) {
             return <Check onClick={() => clicking(type, taskId)} className={`${styles.BtnIcon} ${styles.Done}`} />
         }else if (type === constants.REMOVE) {
